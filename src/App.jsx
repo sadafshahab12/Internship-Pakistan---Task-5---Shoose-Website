@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Parent from "./components/Parent";
 
 function App() {
   const user = "alice";
@@ -11,7 +8,6 @@ function App() {
     setShowText(!showText);
   };
   const [inputValue, setInputValue] = useState("");
-  const [error, setError] = useState("");
   const handleFormSubmission = (e) => {
     e.preventDefault();
     if (inputValue === "") {
@@ -24,6 +20,13 @@ function App() {
     }
   };
 
+  const [searchQuery, setSearchQuery] = useState("");
+  const dataArray = ["book", "cap", "data", "page", "pencil"];
+  const [filterdata, setFilterData] = useState(dataArray);
+
+  const filteredData = filterdata.filter((item) =>
+    item.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts/1")
@@ -45,7 +48,6 @@ function App() {
   };
   return (
     <>
-      <Parent user={user} />
       <button onClick={handleShowText}>{showText ? "Hide" : "Show"}</button>
       {showText && <p> hellow</p>}
 
@@ -75,6 +77,20 @@ function App() {
         <ul>
           {todoes && todoes.map((li, index) => <li key={index}> {li}</li>)}
         </ul>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          placeholder="search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        {filteredData.length > 0 ? (
+          filteredData.map((item, index) => <p key={index}>{item}</p>)
+        ) : (
+          <p>No items found</p>
+        )}
       </div>
     </>
   );
