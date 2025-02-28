@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sofiasans: "Sofia Sans";
+  --breakpoint-xxs: 22rem;
+  --breakpoint-xs: 30rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-smd: 50rem;
+  --breakpoint-mmd: 60rem;
+  --breakpoint-lmd: 70rem;
+  --breakpoint-lg: 80rem;
+  --breakpoint-xl: 90rem;
+  --breakpoint-xxl: 100rem;
+  --breakpoint-xxxl: 120rem;
+  --color-slate: #1d293d;
+  --text-12: 12px;
+  --text-20: 20px;
+  --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --animate-zoom: zoom 5s ease-in-out infinite;
+}
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(0.7);
+  }
+
+  70% {
+    transform: rotate(40deg);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  20% {
+    transform: scale(1.1);
+  }
+}
+
+@layer components{
+  .cata-nav {
+    @apply hover:underline hover:scale-110 hover:font-medium transition-all ease-in duration-200 underline-offset-4 decoration-1 cursor-pointer font-light text-sm
+  }
+  .mytransition{
+    @apply transition ease-linear duration-300
+  }
+}
