@@ -5,14 +5,14 @@ const CategoryCard = () => {
   const [productData, setProductData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const response = await fetch("/src/assets/json/category.json");
-        if(!response.ok){
-            throw new Error ("Failed to load catergory data")
+        if (!response.ok) {
+          throw new Error("Failed to load catergory data");
         }
         const data = await response.json();
         console.log(data);
@@ -38,8 +38,10 @@ const navigate = useNavigate();
       {Object.keys(productData).map((category) => (
         <div key={category} className="grid grid-cols-3 gap-6 py-10 ">
           {productData[category].map((item, index) => (
-            <div key={index} className="space-y-5 shadow p-4 hover:bg-gradient-to-b hover:from-orange-200 hover:to-teal-200 mytransition"
-            onClick={()=> navigate(`/category/${category}/${index}`)}
+            <div
+              key={index}
+              className="space-y-5 shadow p-4 hover:bg-gradient-to-b hover:from-orange-200 hover:to-teal-200 mytransition"
+              onClick={() => navigate(`/category/${category}/${index}`)}
             >
               <div className="overflow-hidden">
                 <img

@@ -12,21 +12,23 @@
       ],
       "description": "The Nike Air Max 90 is a timeless sneaker known for its classic design, visible Air cushioning, and durable construction. Originally released in 1990, it blends comfort with street style, making it a favorite among sneakerheads. Its versatile design suits both casual wear and athletic performance.",
       "category": "Sneakers",
-      "tags": ["retro", "cushioned", "streetwear"]
+      "tags": ["retro", "cushioned", "streetwear"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Adidas Yeezy Boost 350",
       "price": 220,
       "image": [
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/369bc79a-32c3-4674-80df-dbb746dee892/WMNS+AIR+MAX+90.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/73c4644f-9817-4547-9594-4593196e49b1/WMNS+AIR+MAX+90.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4291206a-c62d-48b5-a9e8-aa7cf665dd36/WMNS+AIR+MAX+90.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1588ae40-add7-4b87-866a-d91fbb1e5135/WMNS+AIR+MAX+90.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ad873455-9c9e-456e-b890-7a0b48b6856e/WMNS+AIR+MAX+90.png"
+        "https://m.media-amazon.com/images/I/61Lv8cd5r1L._AC_SL1500_.jpg",
+        "",
+        "",
+        "",
+        ""
       ],
       "description": "The Adidas Yeezy Boost 350 is a sleek, fashion-forward sneaker designed by Kanye West, featuring a Primeknit upper for a snug, sock-like fit and Boost cushioning for exceptional comfort. Its minimalist design and signature ribbed sole make it a staple in streetwear culture. A perfect blend of style and performance.",
       "category": "Sneakers",
-      "tags": ["fashion", "premium", "boost"]
+      "tags": ["fashion", "premium", "boost"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Puma Future Rider",
@@ -40,7 +42,8 @@
       ],
       "description": "The Puma Future Rider is a retro-inspired sneaker that combines vintage running aesthetics with modern comfort. Featuring a lightweight nylon upper, cushioned Rider Foam midsole, and a grippy Federbein outsole, it delivers both style and performance. Perfect for everyday wear, it brings a bold, sporty look to any outfit.",
       "category": "Sneakers",
-      "tags": ["lightweight", "lifestyle", "trendy"]
+      "tags": ["lightweight", "lifestyle", "trendy"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Converse Chuck Taylor All-Star",
@@ -54,7 +57,8 @@
       ],
       "description": "The Converse Chuck Taylor All-Star is a legendary sneaker known for its timeless canvas upper, rubber toe cap, and vulcanized sole. Originally designed for basketball, it has become a global icon of casual and street style. Its versatile design pairs effortlessly with any outfit.",
       "category": "Sneakers",
-      "tags": ["casual", "versatile", "classic"]
+      "tags": ["casual", "versatile", "classic"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "New Balance 550",
@@ -68,7 +72,8 @@
       ],
       "description": "The New Balance 550 is a retro basketball sneaker with a sleek, low-top silhouette and premium leather construction. Originally released in 1989, it blends vintage court aesthetics with modern streetwear appeal. Its cushioned midsole and durable outsole provide all-day comfort and support.",
       "category": "Sneakers",
-      "tags": ["basketball", "retro", "leather"]
+      "tags": ["basketball", "retro", "leather"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Vans Old Skool",
@@ -82,7 +87,8 @@
       ],
       "description": "The Vans Old Skool is a classic skate sneaker featuring a durable canvas and suede upper, the iconic side stripe, and a waffle rubber outsole. Designed for both style and performance, it offers excellent grip and durability. Its timeless design makes it a staple in streetwear and skate culture.",
       "category": "Sneakers",
-      "tags": ["skate", "canvas", "everyday"]
+      "tags": ["skate", "canvas", "everyday"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     }
   ],
   "formal": [
@@ -98,7 +104,8 @@
       ],
       "description": "The Allen Edmonds Park Avenue is a premium dress shoe crafted from high-quality leather with a sleek cap-toe design. Made in the USA, it features Goodyear welt construction for durability and recraftability. A timeless choice, it’s perfect for business, formal events, and classic style.",
       "category": "Formal",
-      "tags": ["oxford", "leather", "luxury"]
+      "tags": ["oxford", "leather", "luxury"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Clarks Tilden Cap",
@@ -112,7 +119,8 @@
       ],
       "description": "A versatile cap-toe Oxford with smooth leather, stretch gore panels for flexibility, and a cushioned Ortholite footbed, perfect for office wear and formal events.",
       "category": "Formal",
-      "tags": ["business", "classic", "budget-friendly"]
+      "tags": ["business", "classic", "budget-friendly"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Magnanni Monk Strap",
@@ -126,7 +134,8 @@
       ],
       "description": "A refined, handcrafted Spanish dress shoe with a sleek single or double monk strap closure, premium leather, and Bologna construction for a flexible, luxurious feel.",
       "category": "Formal",
-      "tags": ["monk-strap", "premium", "elegant"]
+      "tags": ["monk-strap", "premium", "elegant"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Johnston & Murphy Wingtip",
@@ -140,7 +149,8 @@
       ],
       "description": "A classic wingtip dress shoe featuring intricate brogue detailing, high-quality leather, and cushioned support, offering both elegance and comfort.",
       "category": "Formal",
-      "tags": ["wingtip", "leather", "business-casual"]
+      "tags": ["wingtip", "leather", "business-casual"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Cole Haan Grand Plus",
@@ -154,7 +164,8 @@
       ],
       "description": "A modern dress shoe combining premium leather with Grand.OS technology, ensuring lightweight cushioning and flexibility for all-day wear.",
       "category": "Formal",
-      "tags": ["comfortable", "workwear", "oxford"]
+      "tags": ["comfortable", "workwear", "oxford"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Ecco Helsinki Slip-On",
@@ -168,7 +179,8 @@
       ],
       "description": "A sleek, professional slip-on dress shoe with premium leather, a cushioned insole, and a flexible sole, providing all-day comfort for work and formal settings.",
       "category": "Formal",
-      "tags": ["slip-on", "lightweight", "office"]
+      "tags": ["slip-on", "lightweight", "office"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     }
   ],
   "sports": [
@@ -184,7 +196,8 @@
       ],
       "description": "An elite running shoe featuring ZoomX foam and a carbon fiber plate for maximum energy return, designed for marathon runners seeking peak performance.",
       "category": "Sports",
-      "tags": ["running", "speed", "marathon"]
+      "tags": ["running", "speed", "marathon"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Adidas Predator Edge",
@@ -198,7 +211,8 @@
       ],
       "description": "A high-performance soccer cleat designed with Zone Skin technology for enhanced ball control, a supportive mid-cut design, and a grippy sole for traction.",
       "category": "Sports",
-      "tags": ["football", "grip", "precision"]
+      "tags": ["football", "grip", "precision"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Under Armour Curry 10",
@@ -212,7 +226,8 @@
       ],
       "description": "A versatile cross-training shoe with Floatride Energy cushioning, a durable Flexweave upper, and a Lift and Run chassis for gym workouts and high-intensity training.",
       "category": "Sports",
-      "tags": ["basketball", "high-top", "cushioning"]
+      "tags": ["basketball", "high-top", "cushioning"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "ASICS Gel-Kayano 29",
@@ -226,7 +241,8 @@
       ],
       "description": "A high-support running shoe with advanced GEL cushioning and FF Blast+ foam, delivering stability and comfort for long-distance runs.",
       "category": "Sports",
-      "tags": ["running", "support", "gel"]
+      "tags": ["running", "support", "gel"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Reebok Nano X3",
@@ -240,7 +256,8 @@
       ],
       "description": "A legendary skate shoe with a durable canvas and suede upper, signature side stripe, and waffle sole for excellent grip and timeless street style.",
       "category": "Sports",
-      "tags": ["training", "gym", "versatile"]
+      "tags": ["training", "gym", "versatile"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Puma Ultra 1.4",
@@ -254,7 +271,8 @@
       ],
       "description": "A lightweight soccer boot with an ultra-thin MATRYXEVO woven upper, offering speed, agility, and precision on the field.",
       "category": "Sports",
-      "tags": ["football", "lightweight", "speed"]
+      "tags": ["football", "lightweight", "speed"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     }
   ],
   "casual": [
@@ -270,7 +288,8 @@
       ],
       "description": "A lightweight and breathable canvas slip-on with a cushioned insole and signature elastic 'V' for easy wear, perfect for casual, everyday use.",
       "category": "Casual",
-      "tags": ["canvas", "slip-on", "lightweight"]
+      "tags": ["canvas", "slip-on", "lightweight"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Skechers GOwalk 6",
@@ -284,7 +303,8 @@
       ],
       "description": "A comfortable walking shoe with lightweight Ultra Go cushioning, Air-Cooled Goga Mat insole, and flexible outsole for superior comfort.",
       "category": "Casual",
-      "tags": ["walking", "breathable", "soft"]
+      "tags": ["walking", "breathable", "soft"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Birkenstock Arizona",
@@ -298,7 +318,8 @@
       ],
       "description": "A legendary two-strap sandal with contoured cork footbed, premium suede or leather straps, and excellent arch support for all-day comfort.",
       "category": "Casual",
-      "tags": ["sandals", "arch-support", "natural"]
+      "tags": ["sandals", "arch-support", "natural"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Timberland Classic Boat Shoes",
@@ -312,7 +333,8 @@
       ],
       "description": "A timeless leather boat shoe featuring handsewn construction, a cushioned footbed, and a grippy rubber outsole, perfect for casual and nautical-inspired outfits.",
       "category": "Casual",
-      "tags": ["boat-shoes", "leather", "smart-casual"]
+      "tags": ["boat-shoes", "leather", "smart-casual"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Dr. Martens 1461",
@@ -326,7 +348,8 @@
       ],
       "description": "A rugged yet stylish low-top leather shoe with iconic yellow stitching, AirWair cushioned sole, and durable Goodyear welt construction.",
       "category": "Casual",
-      "tags": ["leather", "durable", "versatile"]
+      "tags": ["leather", "durable", "versatile"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
     {
       "name": "Nike Court Vision Low",
@@ -340,7 +363,8 @@
       ],
       "description": "A retro-inspired low-top sneaker blending classic basketball style with modern comfort, featuring a leather upper and durable rubber outsole.",
       "category": "Casual",
-      "tags": ["everyday", "lifestyle", "retro"]
+      "tags": ["everyday", "lifestyle", "retro"],
+      "sizes": [38, 39, 40, 41, 42, 43, 44]
     }
   ]
 }

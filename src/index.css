@@ -42,4 +42,7 @@
   .mytransition{
     @apply transition ease-linear duration-300
   }
+  .imageChevron{
+    @apply h-10 w-10 flex justify-center items-center bg-slate-200 rounded-lg
+  }
 }
