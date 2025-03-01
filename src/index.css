@@ -40,9 +40,12 @@
     @apply capitalize hover:underline hover:scale-110 hover:font-medium transition-all ease-in duration-200 underline-offset-4 decoration-1 cursor-pointer font-light text-sm;
   }
   .mytransition {
-    @apply transition ease-linear duration-300;
+    @apply transition ease-linear duration-200;
   }
   .imageChevron {
     @apply h-10 w-10 flex justify-center items-center bg-slate-200 rounded-lg;
   }
+  
 }
+
+

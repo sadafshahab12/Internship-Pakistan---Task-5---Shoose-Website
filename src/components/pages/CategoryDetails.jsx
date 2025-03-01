@@ -3,27 +3,33 @@ import { useParams } from "react-router-dom";
 import Button from "../ui/Button";
 import ProductDetailsHeader from "../Product-details-ui/ProductDetailsHeader";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
+import { useCart } from "../context/CartContext";
 
 const CategoryDetails = () => {
   const { category, id } = useParams();
-  const [productDetails, setProductDetails] = useState([]);
+  const [productDetails, setProductDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [selectedSize, setSelectedSize] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+  const [count, setCount] = useState(1);
+  const { addToCart } = useCart();
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
-        const response = await fetch("/src/assets/json/category.json");
+        const response = await fetch("/json/category.json");
         if (!response.ok) {
           throw new Error("Error in fetching products details");
         }
         const data = await response.json();
+        console.log("Fetched Data:", data); // Log the fetched data
+
         const productIndex = parseInt(id, 10);
+        console.log("Category:", category, "Product Index:", productIndex); // Log category and product index
 
         if (data[category] && data[category][productIndex]) {
           const categorydata = data[category][productIndex];
+          console.log("Product Details:", categorydata); // Log the product details
           setProductDetails(categorydata);
           setCurrentImageIndex(0);
         } else {
@@ -38,20 +44,60 @@ const CategoryDetails = () => {
     };
     fetchProductDetails();
   }, [category, id]);
+
   const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === productDetails.image.length - 1 ? 0 : prevIndex + 1
-    );
+    if (productDetails?.image?.length) {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === productDetails.image.length - 1 ? 0 : prevIndex + 1
+      );
+    }
   };
+
   const handlePrevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? productDetails.image.length - 1 : prevIndex - 1
-    );
+    if (productDetails?.image?.length) {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === 0 ? productDetails.image.length - 1 : prevIndex - 1
+      );
+    }
+  };
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size");
+      return;
+    }
+
+    const item = {
+      name: productDetails.name,
+      price: productDetails.price,
+      image: productDetails.image[0],
+      size: selectedSize,
+      quantity: count,
+      category: productDetails.category,
+      date: new Date().toLocaleDateString(),
+    };
+    addToCart(item);
+    setCount(1);
+    setSelectedSize(null);
   };
   if (loading) {
     return <div>Loading....</div>;
   }
-  if (!productDetails) return null;
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!productDetails) {
+    return <div>No product details found.</div>;
+  }
+
+  const handleIncreaseCount = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+  const handleDecreaseCount = () => {
+    setCount((prevCount) => Math.max(prevCount - 1, 1));
+  };
   return (
     <section>
       <ProductDetailsHeader
@@ -82,12 +128,13 @@ const CategoryDetails = () => {
                   src={image}
                   alt={image}
                   className={`w-20 h-20 object-cover rounded-md cursor-pointer`}
-                 onClick={()=> setCurrentImageIndex(index)}
+                  onClick={() => setCurrentImageIndex(index)}
                 />
               </div>
             ))}
           </div>
         </div>
+
         <div className="space-y-6">
           <h1 className="text-6xl font-black">{productDetails.name}</h1>
           <p className="text-lg">Price: ${productDetails.price}</p>
@@ -95,6 +142,24 @@ const CategoryDetails = () => {
             {productDetails.category}
           </p>
           <p className="py-5 text-lg">{productDetails.description}</p>
+          {/* counter  */}
+          <div className=" flex items-center gap-5">
+            <button
+              className="h-10 w-10 bg-slate-200 text-lg active:scale-90 mytransition flex justify-center items-center rounded-full cursor-pointer"
+              onClick={handleDecreaseCount}
+            >
+              -
+            </button>
+            <button>{count}</button>
+            <button
+              className="h-10 w-10 bg-slate-200 text-lg active:scale-90 mytransition flex justify-center items-center rounded-full cursor-pointer"
+              onClick={handleIncreaseCount}
+            >
+              +
+            </button>
+          </div>
+
+          {/* size  */}
           <div className="size flex gap-3 items-center ">
             <h1>Select Size:</h1>
             {productDetails.sizes?.map((size) => (
@@ -111,7 +176,9 @@ const CategoryDetails = () => {
               </button>
             ))}
           </div>
-          <Button btnContent={"Add to Cart"} />
+          <div onClick={handleAddToCart}>
+            <Button btnContent={"Add to Cart"} />
+          </div>
         </div>
       </div>
     </section>

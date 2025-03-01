@@ -11,7 +11,7 @@
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/200560ad-baa6-4ec9-957d-e83876b52888/AIR+MAX+90.png"
       ],
       "description": "The Nike Air Max 90 is a timeless sneaker known for its classic design, visible Air cushioning, and durable construction. Originally released in 1990, it blends comfort with street style, making it a favorite among sneakerheads. Its versatile design suits both casual wear and athletic performance.",
-      "category": "Sneakers",
+      "category": "sneakers",
       "tags": ["retro", "cushioned", "streetwear"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -26,7 +26,7 @@
         "https://www.hopkicks.pk/image/cache/catalog/2023/MAY%2023/DJ%20SHOES/PART%201/3/7-1100x1100.jpg"
       ],
       "description": "The Adidas Yeezy Boost 350 is a sleek, fashion-forward sneaker designed by Kanye West, featuring a Primeknit upper for a snug, sock-like fit and Boost cushioning for exceptional comfort. Its minimalist design and signature ribbed sole make it a staple in streetwear culture. A perfect blend of style and performance.",
-      "category": "Sneakers",
+      "category": "sneakers",
       "tags": ["fashion", "premium", "boost"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -41,7 +41,7 @@
         "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/383148/31/sv02/fnd/EEA/fmt/png/Future-Rider-Displaced-Trainers"
       ],
       "description": "The Puma Future Rider is a retro-inspired sneaker that combines vintage running aesthetics with modern comfort. Featuring a lightweight nylon upper, cushioned Rider Foam midsole, and a grippy Federbein outsole, it delivers both style and performance. Perfect for everyday wear, it brings a bold, sporty look to any outfit.",
-      "category": "Sneakers",
+      "category": "sneakers",
       "tags": ["lightweight", "lifestyle", "trendy"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -56,7 +56,7 @@
         "https://www.converse.my/media/catalog/product/cache/fd0e379f89890db9af2334e8ce8c85ef/0/8/0885-CONA08258C005006-6.jpg"
       ],
       "description": "The Converse Chuck Taylor All-Star is a legendary sneaker known for its timeless canvas upper, rubber toe cap, and vulcanized sole. Originally designed for basketball, it has become a global icon of casual and street style. Its versatile design pairs effortlessly with any outfit.",
-      "category": "Sneakers",
+      "category": "sneakers",
       "tags": ["casual", "versatile", "classic"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -71,7 +71,7 @@
         "https://nb.scene7.com/is/image/NB/bb550esc_nb_06_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
       ],
       "description": "The New Balance 550 is a retro basketball sneaker with a sleek, low-top silhouette and premium leather construction. Originally released in 1989, it blends vintage court aesthetics with modern streetwear appeal. Its cushioned midsole and durable outsole provide all-day comfort and support.",
-      "category": "Sneakers",
+      "category": "sneakers",
       "tags": ["basketball", "retro", "leather"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -86,7 +86,7 @@
         "https://images.journeys.com/images/products/1_569855_ZM_ALT5.JPG"
       ],
       "description": "The Vans Old Skool is a classic skate sneaker featuring a durable canvas and suede upper, the iconic side stripe, and a waffle rubber outsole. Designed for both style and performance, it offers excellent grip and durability. Its timeless design makes it a staple in streetwear and skate culture.",
-      "category": "Sneakers",
+      "category": "sneakers",
       "tags": ["skate", "canvas", "everyday"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     }
@@ -103,7 +103,7 @@
         "https://www.allenedmonds.com/blob/product-images/39099/ec/40/23328/ec4023328_lifestyle_feed1000.jpg"
       ],
       "description": "The Allen Edmonds Park Avenue is a premium dress shoe crafted from high-quality leather with a sleek cap-toe design. Made in the USA, it features Goodyear welt construction for durability and recraftability. A timeless choice, it’s perfect for business, formal events, and classic style.",
-      "category": "Formal",
+      "category": "formal",
       "tags": ["oxford", "leather", "luxury"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -118,7 +118,7 @@
         "https://shop.suitntux.com/cdn/shop/products/clarks-tilden-cap-dark-tan-03.jpg?v=1598636174&width=3000"
       ],
       "description": "A versatile cap-toe Oxford with smooth leather, stretch gore panels for flexibility, and a cushioned Ortholite footbed, perfect for office wear and formal events.",
-      "category": "Formal",
+      "category": "formal",
       "tags": ["business", "classic", "budget-friendly"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -133,7 +133,7 @@
         "https://magnanni.com/media/catalog/product/cache/8119ba437eced1f9032fc83ae9c2ade8/2/3/23772_keanu_cream-suede_topdown.jpg"
       ],
       "description": "A refined, handcrafted Spanish dress shoe with a sleek single or double monk strap closure, premium leather, and Bologna construction for a flexible, luxurious feel.",
-      "category": "Formal",
+      "category": "formal",
       "tags": ["monk-strap", "premium", "elegant"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -148,7 +148,7 @@
         "https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/johnston--murphy-boys-holden-wingtip-oxfords-youth/00000000_zi_d3412cd9-4138-4d08-bcba-742c621b31a2__08_ai.jpg"
       ],
       "description": "A classic wingtip dress shoe featuring intricate brogue detailing, high-quality leather, and cushioned support, offering both elegance and comfort.",
-      "category": "Formal",
+      "category": "formal",
       "tags": ["wingtip", "leather", "business-casual"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -163,7 +163,7 @@
         "https://colehaan.co.uk/cdn/shop/files/C36939_C.jpg?v=1740570257&width=600"
       ],
       "description": "A modern dress shoe combining premium leather with Grand.OS technology, ensuring lightweight cushioning and flexibility for all-day wear.",
-      "category": "Formal",
+      "category": "formal",
       "tags": ["comfortable", "workwear", "oxford"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -177,7 +177,7 @@
         "https://valentinosshoes.com/cdn/shop/products/Screenshot-2020-03-31-at-8.04.15-PM-600x600_960x.png?v=1647984689"
       ],
       "description": "A sleek, professional slip-on dress shoe with premium leather, a cushioned insole, and a flexible sole, providing all-day comfort for work and formal settings.",
-      "category": "Formal",
+      "category": "formal",
       "tags": ["slip-on", "lightweight", "office"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     }
@@ -194,7 +194,7 @@
         "https://www.hopkicks.pk/image/cache/catalog/2023/APRIL%2023/LARGE%20ORDER/PART%203/12/14-1100x1100.jpg"
       ],
       "description": "An elite running shoe featuring ZoomX foam and a carbon fiber plate for maximum energy return, designed for marathon runners seeking peak performance.",
-      "category": "Sports",
+      "category": "sports",
       "tags": ["running", "speed", "marathon"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -209,7 +209,7 @@
         "https://media2.sport-bittl.com/images/product_images/original_images/81010022115H_adidas_Predator_Edge2_FG_Fussballsch_U_blau.jpg?width=600&progressive=1"
       ],
       "description": "A high-performance soccer cleat designed with Zone Skin technology for enhanced ball control, a supportive mid-cut design, and a grippy sole for traction.",
-      "category": "Sports",
+      "category": "sports",
       "tags": ["football", "grip", "precision"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -224,7 +224,7 @@
         "https://underarmour.scene7.com/is/image/Underarmour/3026272-700_SOLE?rp=standard-30pad|pdpZoomDesktop&scl=0.50&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=1836&hei=1950&size=850,850"
       ],
       "description": "A versatile cross-training shoe with Floatride Energy cushioning, a durable Flexweave upper, and a Lift and Run chassis for gym workouts and high-intensity training.",
-      "category": "Sports",
+      "category": "sports",
       "tags": ["basketball", "high-top", "cushioning"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -239,7 +239,7 @@
         "https://athlonstore.pk/wp-content/uploads/2024/01/1011B440_401_SB_Z5_GLB.webp"
       ],
       "description": "A high-support running shoe with advanced GEL cushioning and FF Blast+ foam, delivering stability and comfort for long-distance runs.",
-      "category": "Sports",
+      "category": "sports",
       "tags": ["running", "support", "gel"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -254,7 +254,7 @@
         "https://images.reebok.eu/reebok-nano-x3-shoes_19728386_44794428_2048.jpg?c=1"
       ],
       "description": "A legendary skate shoe with a durable canvas and suede upper, signature side stripe, and waffle sole for excellent grip and timeless street style.",
-      "category": "Sports",
+      "category": "sports",
       "tags": ["training", "gym", "versatile"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -269,7 +269,7 @@
         "https://gfx.r-gol.com/media/res/products/994/152994/795x1035/106721-03_5.jpg"
       ],
       "description": "A lightweight soccer boot with an ultra-thin MATRYXEVO woven upper, offering speed, agility, and precision on the field.",
-      "category": "Sports",
+      "category": "sports",
       "tags": ["football", "lightweight", "speed"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     }
@@ -286,7 +286,7 @@
         "https://img01.ztat.net/article/spp-media-p1/08fcccb9d29f48e1bca1732564863e9e/56ffdeb3df4f4acb8b696ff1129018f8.jpg?imwidth=1800"
       ],
       "description": "A lightweight and breathable canvas slip-on with a cushioned insole and signature elastic 'V' for easy wear, perfect for casual, everyday use.",
-      "category": "Casual",
+      "category": "casual",
       "tags": ["canvas", "slip-on", "lightweight"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -301,7 +301,7 @@
         "https://m.media-amazon.com/images/I/61LgteQqulL._AC_SL1500_.jpg"
       ],
       "description": "A comfortable walking shoe with lightweight Ultra Go cushioning, Air-Cooled Goga Mat insole, and flexible outsole for superior comfort.",
-      "category": "Casual",
+      "category": "casual",
       "tags": ["walking", "breathable", "soft"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -316,7 +316,7 @@
         "https://cdn.shopify.com/s/files/1/0267/2322/1694/products/1294237.jpg?v=1721823868"
       ],
       "description": "A legendary two-strap sandal with contoured cork footbed, premium suede or leather straps, and excellent arch support for all-day comfort.",
-      "category": "Casual",
+      "category": "casual",
       "tags": ["sandals", "arch-support", "natural"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -331,7 +331,7 @@
         "https://www.la-botte.com/PHOTOS/Timberland/CLASSIC_BOAT_2EYE_SAND__HD_D.jpg"
       ],
       "description": "A timeless leather boat shoe featuring handsewn construction, a cushioned footbed, and a grippy rubber outsole, perfect for casual and nautical-inspired outfits.",
-      "category": "Casual",
+      "category": "casual",
       "tags": ["boat-shoes", "leather", "smart-casual"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -346,7 +346,7 @@
         "https://www.numberoneshoesandhannahs.co.nz/content/products/1461-sr-ns-3-eye-dr-martens-shoes-dark-tan-image05-32012205.jpg?width=512"
       ],
       "description": "A rugged yet stylish low-top leather shoe with iconic yellow stitching, AirWair cushioned sole, and durable Goodyear welt construction.",
-      "category": "Casual",
+      "category": "casual",
       "tags": ["leather", "durable", "versatile"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     },
@@ -361,7 +361,7 @@
         "https://www.futbolemotion.com/imagesarticulos/186759/750/zapatilla-nike-court-vision-low-sail-pro-green-picante-red-opti-yellow-pale-v-2.webp"
       ],
       "description": "A retro-inspired low-top sneaker blending classic basketball style with modern comfort, featuring a leather upper and durable rubber outsole.",
-      "category": "Casual",
+      "category": "casual",
       "tags": ["everyday", "lifestyle", "retro"],
       "sizes": [38, 39, 40, 41, 42, 43, 44]
     }
