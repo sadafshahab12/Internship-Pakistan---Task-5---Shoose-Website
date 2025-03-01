@@ -64,7 +64,7 @@ const CategoryDetails = () => {
             <img
               src={productDetails.image[currentImageIndex]}
               alt={productDetails.name}
-              className="w-full h-100 object-cover"
+              className="w-full h-100 object-cover "
             />
             <div className="flex items-center gap-3 absolute top-5 right-5 z-10">
               <div className="imageChevron" onClick={handleNextImage}>

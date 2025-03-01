@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "../../components/ui/Button";
 import { useNavigate } from "react-router-dom";
-const CategoryCard = () => {
+const CategoryCard = ({ selectedCategory, sortOrder }) => {
   const [productData, setProductData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -35,30 +35,43 @@ const CategoryCard = () => {
   }
   return (
     <div>
-      {Object.keys(productData).map((category) => (
-        <div key={category} className="grid grid-cols-3 gap-6 py-10 ">
-          {productData[category].map((item, index) => (
-            <div
-              key={index}
-              className="space-y-5 shadow p-4 hover:bg-gradient-to-b hover:from-orange-200 hover:to-teal-200 mytransition"
-              onClick={() => navigate(`/category/${category}/${index}`)}
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={item.image[0]}
-                  alt={item.name}
-                  className="w-full h-80 object-cover hover:scale-110 mytransition "
-                />
-              </div>
+      {Object.keys(productData).map(
+        (category) =>
+          (selectedCategory === "All" || selectedCategory === category) && (
+            <div key={category} className="grid grid-cols-3 gap-6 py-10 ">
+              {productData[category]
+                .sort((a, b) =>
+                  sortOrder === "lowtohigh"
+                    ? a.price - b.price
+                    : sortOrder === "hightolow"
+                    ? b.price - a.price
+                    : 0
+                )
+                .map((item, index) => (
+                  <div
+                    key={index}
+                    className="space-y-5 shadow p-4 hover:bg-gradient-to-b hover:from-orange-200 hover:to-teal-200 mytransition"
+                    onClick={() => navigate(`/category/${category}/${index}`)}
+                  >
+                    <div className="overflow-hidden">
+                      <img
+                        src={item.image[0]}
+                        alt={item.name}
+                        className="w-full h-80 object-cover hover:scale-110 mytransition "
+                      />
+                    </div>
 
-              <h1 className="text-center text-2xl font-black">{item.name}</h1>
-              <p className="text-center">Price : ${item.price}</p>
-
-              <Button btnContent={"Add to Cart"} />
+                    <h1 className="text-center text-2xl font-black">
+                      {item.name}
+                    </h1>
+                    <p className="text-center">Price : ${item.price}</p>
+                    <p>{item.category}</p>
+                    <Button btnContent={"Add to Cart"} />
+                  </div>
+                ))}
             </div>
-          ))}
-        </div>
-      ))}
+          )
+      )}
     </div>
   );
 };
