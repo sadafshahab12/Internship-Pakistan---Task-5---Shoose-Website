@@ -1,10 +1,14 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
+import { useEffect } from "react";
 
 const OrderConfirmation = () => {
   const { state } = useLocation(); // Access order details passed from Checkout
   const orderDetails = state?.orderDetails;
-const navigate = useNavigate();
+  useEffect(() => {
+    document.title = "Order Confirmation - Ecommerce";
+  }, []);
+  const navigate = useNavigate();
   return (
     <section className="bg-gradient-to-br from-orange-100 to-teal-200 min-h-screen flex items-center justify-center pt-15 px-5">
       <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg text-center">
@@ -36,7 +40,7 @@ const navigate = useNavigate();
 
         {/* Continue Shopping Button */}
         <div className="mt-10" onClick={() => navigate("/shoes")}>
-          <Button btnContent={"Continue Shopping"}  />
+          <Button btnContent={"Continue Shopping"} />
         </div>
       </div>
     </section>

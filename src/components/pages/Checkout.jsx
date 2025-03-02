@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import Button from "../ui/Button";
 import Modal from "../ui/Modal";
 
 const Checkout = () => {
+  useEffect(() => {
+    document.title = "Checkout - Ecommerce";
+  }, []);
   const { state } = useLocation(); // Access cart items and total price passed from Cart
   const { cartItems, clearCart } = useCart(); // Use clearCart to remove items after placing order
   const navigate = useNavigate();

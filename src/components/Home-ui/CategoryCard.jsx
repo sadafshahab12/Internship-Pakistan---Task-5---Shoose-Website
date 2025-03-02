@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Button from "../../components/ui/Button";
 import { useNavigate } from "react-router-dom";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
+import Loading from "../pages/Loading";
 
 const CategoryCard = ({ selectedCategory, sortOrder }) => {
   const [productData, setProductData] = useState([]);
@@ -21,11 +22,16 @@ const CategoryCard = ({ selectedCategory, sortOrder }) => {
         const data = await response.json();
         console.log(data);
         setProductData(data);
-        setLoading(false);
+
       } catch (error) {
         setError("Error in fetching Product Data");
         setLoading(false);
         console.log(error);
+      }
+      finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
       }
     };
     fetchProduct();
@@ -38,8 +44,8 @@ const CategoryCard = ({ selectedCategory, sortOrder }) => {
         sortOrder === "lowtohigh"
           ? a.price - b.price
           : sortOrder === "hightolow"
-          ? b.price - a.price
-          : 0
+            ? b.price - a.price
+            : 0
       );
       acc.push(...sortProducts);
     }
@@ -63,7 +69,11 @@ const CategoryCard = ({ selectedCategory, sortOrder }) => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
   }
 
   if (error) {
@@ -111,11 +121,10 @@ const CategoryCard = ({ selectedCategory, sortOrder }) => {
             <button
               key={pageNumber}
               onClick={() => setCurrentPage(pageNumber)}
-              className={`w-6 xxs:w-8 xs:w-10 h-6 xxs:h-8 xs:h-10 flex justify-center items-center ${
-                currentPage === pageNumber
+              className={`w-6 xxs:w-8 xs:w-10 h-6 xxs:h-8 xs:h-10 flex justify-center items-center ${currentPage === pageNumber
                   ? "bg-gradient-to-b from-orange-200 to-teal-200"
                   : "bg-slate-200"
-              }  cursor-pointer `}
+                }  cursor-pointer `}
             >
               {pageNumber}
             </button>

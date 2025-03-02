@@ -1,4 +1,3 @@
-
 import CountDown from "../Home-ui/CountDown";
 import Button from "./Button";
 
@@ -8,11 +7,15 @@ const Hero = () => {
       <div className="max-w-6xl px-10 mx-auto relative flex justify-center items-center h-[70vh] xs:h-[85vh] sm:h-screen ">
         <div className="tag absolute bottom-10 xxs:bottom-15 xs:bottom-30 sm:bottom-20 right-5 xxs:right-10 h-15 xs:h-20 sm:h-25 w-15 xs:w-20 sm:w-25 bg-slate-800 rounded-full flex flex-col justify-center items-center  text-center shadow-md shadow-orange-400 z-10 ">
           <p className=" text-white font-light py-2 px-4 rotate-30 text-12 xs:text-sm block">
-            Flat <span className=" text-xl xs:text-3xl sm:text-4xl block font-bold">50%</span>off{" "}
+            Flat{" "}
+            <span className=" text-xl xs:text-3xl sm:text-4xl block font-bold">
+              50%
+            </span>
+            off{" "}
           </p>
         </div>
         <div className="absolute top-[12%] xxs:top-[15%] xs:top-[10%] left-0  ">
-        <CountDown/>
+          <CountDown />
         </div>
         <div className="animate-zoom absolute top-20 xxs:top-15 xs:top-10 ">
           <img

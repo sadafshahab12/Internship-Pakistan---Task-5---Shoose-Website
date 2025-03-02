@@ -2,10 +2,13 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useCart } from "../context/CartContext";
 import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "../ui/Modal";
 
 const Cart = () => {
+  useEffect(() => {
+    document.title = "Cart - Ecommerce";
+  }, []);
   const { cartItems, updateCartItemQuantity, removeItemFromCart } = useCart();
   const navigate = useNavigate();
   const totalPrice = cartItems.reduce(
@@ -42,7 +45,9 @@ const Cart = () => {
   // Handle Delete Confirmation
   const handleDeleteConfirmation = (index, item) => {
     setModalTitle("Delete Item");
-    setModalMessage("Are you sure you want to remove this item from your cart?");
+    setModalMessage(
+      "Are you sure you want to remove this item from your cart?"
+    );
     setProductName(item.name);
     setItemIndexToDelete(index);
 

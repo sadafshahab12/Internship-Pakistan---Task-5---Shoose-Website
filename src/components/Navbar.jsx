@@ -31,13 +31,13 @@ const Navbar = () => {
         </div>
         <div className="sm:block hidden">
           <ul className="flex  items-center gap-10">
-            <li className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200" >
+            <li className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200">
               <Link to={"/"}>Home</Link>
             </li>
-            <li className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200" >
+            <li className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200">
               <Link to={"/shoes"}>Shoes</Link>
             </li>
-            <li className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200" >
+            <li className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200">
               <Link to={"/contact"}>Contact</Link>
             </li>
           </ul>
@@ -49,13 +49,22 @@ const Navbar = () => {
           } top-12 h-screen w-full shadow-lg py-2 px-5 transition-all ease-in duration-300`}
         >
           <ul className="flex flex-col items-center gap-10">
-            <li className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200" onClick={handleCloseMenu}>
+            <li
+              className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200"
+              onClick={handleCloseMenu}
+            >
               <Link to={"/"}>Home</Link>
             </li>
-            <li className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200" onClick={handleCloseMenu}>
+            <li
+              className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200"
+              onClick={handleCloseMenu}
+            >
               <Link to={"/shoes"}>Shoes</Link>
             </li>
-            <li className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200" onClick={handleCloseMenu}>
+            <li
+              className="text-sm hover:bg-gray-100 py-1.5 px-3 rounded-md cursor-pointer transition-all ease-in duration-200"
+              onClick={handleCloseMenu}
+            >
               <Link to={"/contact"}>Contact</Link>
             </li>
           </ul>

@@ -14,7 +14,8 @@ const Footer = () => {
               className="w-32 h-auto"
             />
             <p className="text-sm text-gray-400">
-              Step into style with our exclusive collection of shoes. Find the perfect pair for every occasion.
+              Step into style with our exclusive collection of shoes. Find the
+              perfect pair for every occasion.
             </p>
           </div>
 
@@ -23,17 +24,26 @@ const Footer = () => {
             <h3 className="text-lg font-bold">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-sm text-gray-400 hover:text-white transition-all">
+                <a
+                  href="/"
+                  className="text-sm text-gray-400 hover:text-white transition-all"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="/shoes" className="text-sm text-gray-400 hover:text-white transition-all">
+                <a
+                  href="/shoes"
+                  className="text-sm text-gray-400 hover:text-white transition-all"
+                >
                   Shoes
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-sm text-gray-400 hover:text-white transition-all">
+                <a
+                  href="/contact"
+                  className="text-sm text-gray-400 hover:text-white transition-all"
+                >
                   Contact
                 </a>
               </li>
@@ -101,7 +111,8 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-slate-700 mt-8 pt-8 text-center sm:text-left">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Your Shoes Website. All rights reserved.
+            &copy; {new Date().getFullYear()} Your Shoes Website. All rights
+            reserved.
           </p>
         </div>
       </div>

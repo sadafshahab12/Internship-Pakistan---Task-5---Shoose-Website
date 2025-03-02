@@ -5,7 +5,11 @@ import ProductDetailsHeader from "../Product-details-ui/ProductDetailsHeader";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { useCart } from "../context/CartContext";
 import Modal from "../ui/Modal";
+import Loading from "./Loading";
 const CategoryDetails = () => {
+  useEffect(() => {
+    document.title = "Shoose Details - Ecommerce";
+  }, []);
   const { category, id } = useParams();
   const [productDetails, setProductDetails] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -41,7 +45,10 @@ const CategoryDetails = () => {
         setError(error.message);
         console.log(error);
       } finally {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+      
       }
     };
     fetchProductDetails();
@@ -89,7 +96,7 @@ const CategoryDetails = () => {
   };
 
   if (loading) {
-    return <div>Loading....</div>;
+    return <div><Loading/></div>;
   }
 
   if (error) {

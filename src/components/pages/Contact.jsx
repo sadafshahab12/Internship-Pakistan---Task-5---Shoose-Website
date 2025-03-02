@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact - Ecommerce";
+  }, []);
   return (
     <section className="bg-gradient-to-br from-orange-100 to-teal-200 py-20">
       <div className="max-w-6xl mx-auto px-5 sm:px-10">
@@ -16,7 +20,10 @@ const Contact = () => {
             </h2>
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-slate-700"
+                >
                   Your Name
                 </label>
                 <input
@@ -28,7 +35,10 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-slate-700"
+                >
                   Your Email
                 </label>
                 <input
@@ -40,7 +50,10 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-slate-700"
+                >
                   Your Message
                 </label>
                 <textarea
