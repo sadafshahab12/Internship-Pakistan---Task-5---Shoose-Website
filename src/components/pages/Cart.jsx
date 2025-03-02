@@ -26,7 +26,7 @@ const Cart = () => {
   const [productName, setProductName] = useState("");
   const [action, setAction] = useState(null);
   const [itemIndexToDelete, setItemIndexToDelete] = useState(null);
-
+  console.log(itemIndexToDelete);
   // Handle Checkout Confirmation
   const handleCheckout = () => {
     setModalTitle("Confirm Checkout");
