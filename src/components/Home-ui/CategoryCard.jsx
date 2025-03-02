@@ -72,24 +72,26 @@ const CategoryCard = ({ selectedCategory, sortOrder }) => {
 
   return (
     <div>
-      <div className="grid grid-cols-2 mmd:grid-cols-3 gap-6 pb-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 mmd:grid-cols-3 gap-4 sm:gap-6 pb-10 ">
         {paginatedCategory.map((item, index) => (
           <div
             key={index}
-            className="space-y-5 shadow p-4 hover:bg-gradient-to-b hover:from-orange-200 hover:to-teal-200 mytransition"
+            className="space-y-5 shadow p-4 hover:bg-gradient-to-b hover:from-orange-200 hover:to-teal-200 mytransition sm:justify-items-normal justify-items-center w-full"
             onClick={() => navigate(`/category/${item.category}/${index}`)}
           >
             <div className="overflow-hidden">
               <img
                 src={item.image[0]}
                 alt={item.name}
-                className="w-full h-80 object-cover hover:scale-110 mytransition "
+                className="w-60 xs:w-70 sm:w-full h-60 xs:h-70 sm:h-80 object-cover hover:scale-110 mytransition "
               />
             </div>
 
             <h1 className="text-center text-2xl font-black">{item.name}</h1>
             <p className="text-center">Price : ${item.price}</p>
-            <Button btnContent={"Add to Cart"} />
+            <div className="w-full">
+              <Button btnContent={"Add to Cart"} />
+            </div>
           </div>
         ))}
       </div>
@@ -99,9 +101,9 @@ const CategoryCard = ({ selectedCategory, sortOrder }) => {
         <button
           onClick={handlePreviousButton}
           disabled={currentPage === 1}
-          className="w-10 h-10 flex justify-center items-center bg-slate-200 cursor-pointer rounded-full active:scale-90 mytransition"
+          className="w-6 xxs:w-8 xs:w-10 h-6 xxs:h-8 xs:h-10 flex justify-center items-center bg-slate-200 cursor-pointer rounded-full active:scale-90 mytransition"
         >
-          <GoChevronLeft className="w-6 h-6" />
+          <GoChevronLeft className="w-4 xs:w-6 h-4 xs:h-6" />
         </button>
         {[...Array(totalPages)].map((_, index) => {
           const pageNumber = index + 1;
@@ -109,7 +111,7 @@ const CategoryCard = ({ selectedCategory, sortOrder }) => {
             <button
               key={pageNumber}
               onClick={() => setCurrentPage(pageNumber)}
-              className={`w-10 h-10 flex justify-center items-center ${
+              className={`w-6 xxs:w-8 xs:w-10 h-6 xxs:h-8 xs:h-10 flex justify-center items-center ${
                 currentPage === pageNumber
                   ? "bg-gradient-to-b from-orange-200 to-teal-200"
                   : "bg-slate-200"
@@ -121,11 +123,11 @@ const CategoryCard = ({ selectedCategory, sortOrder }) => {
         })}
 
         <button
-          className="w-10 h-10 flex justify-center items-center bg-slate-200 cursor-pointer rounded-full active:scale-90 mytransition"
+          className="w-6 xxs:w-8 xs:w-10 h-6 xxs:h-8 xs:h-10 flex justify-center items-center bg-slate-200 cursor-pointer rounded-full active:scale-90 mytransition"
           onClick={handleNextButton}
           disabled={currentPage === totalPages}
         >
-          <GoChevronRight className="w-6 h-6" />{" "}
+          <GoChevronRight className="w-4 xs:w-6 h-4 xs:h-6" />{" "}
         </button>
       </div>
     </div>

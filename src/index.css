@@ -3,8 +3,8 @@
 @theme {
   --font-sofiasans: "Sofia Sans";
   --breakpoint-xxs: 22rem;
-  --breakpoint-xs: 30rem;
-  --breakpoint-sm: 40rem;
+  --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-sm: 40rem; /*640px*/
   --breakpoint-smd: 50rem; /*800px*/
   --breakpoint-mmd: 60rem; /*960px*/
   --breakpoint-lmd: 70rem;
@@ -38,7 +38,7 @@
 
 @layer components {
   .cata-nav {
-    @apply capitalize hover:underline hover:scale-110 hover:font-medium transition-all ease-in duration-200 underline-offset-4 decoration-1 cursor-pointer font-light text-sm;
+    @apply capitalize hover:underline hover:scale-110 hover:font-medium transition-all ease-in duration-200 underline-offset-4 decoration-1 cursor-pointer font-light text-12 xxs:text-sm;
   }
   .mytransition {
     @apply transition ease-linear duration-200;

@@ -26,10 +26,10 @@ const CountDown = () => {
   // console.log("seconds:", seconds)
   return (
     <div className="flex flex-col justify-center items-center rotate-335 shadow-lg p-4 rounded-md ">
-      <RxLapTimer className="w-8 h-8" />
-      <h1 className="block text-sm">Limited Time Offer: </h1>
+      <RxLapTimer className="w-6 xs:w-8 h-6 xs:h-8" />
+      <h1 className="block text-12 xxs:text-sm">Limited Time Offer: </h1>
       <div className=" flex items-center gap-3">
-        <span className="block text-5xl font-black">
+        <span className="block text-xl xxs:text-2xl xs:text-3xl sm:text-5xl font-black">
           {hour}h {minutes}m {seconds}s{" "}
         </span>
         <span className="text-sm">Left</span>

@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 import ProductDetailsHeader from "../Product-details-ui/ProductDetailsHeader";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { useCart } from "../context/CartContext";
-
+import Modal from "../ui/Modal";
 const CategoryDetails = () => {
   const { category, id } = useParams();
   const [productDetails, setProductDetails] = useState(null);
@@ -14,7 +14,8 @@ const CategoryDetails = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [count, setCount] = useState(1);
   const { addToCart } = useCart();
-  const [isModalOpen , setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalStatus, setModalStatus] = useState("success");
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
@@ -78,10 +79,15 @@ const CategoryDetails = () => {
       date: new Date().toLocaleDateString(),
     };
     addToCart(item);
+    setModalStatus("success");
     setIsModalOpen(true);
+    setTimeout(() => {
+      setIsModalOpen(false);
+    }, 1500);
     setCount(1);
     setSelectedSize(null);
   };
+
   if (loading) {
     return <div>Loading....</div>;
   }
@@ -183,6 +189,18 @@ const CategoryDetails = () => {
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={modalStatus === "success" ? "Success" : "Error"}
+        message={
+          modalStatus === "success"
+            ? "Product has been added to your cart:"
+            : "Please select a size before adding to cart."
+        }
+        productName={productDetails.name}
+        status={modalStatus}
+      />
     </section>
   );
 };

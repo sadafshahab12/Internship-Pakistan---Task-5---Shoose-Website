@@ -16,7 +16,7 @@ const Cart = () => {
   const shippingCharges = totalPrice > 80 ? 0 : 10;
   const totalPriceWithShipping = totalPrice + shippingCharges;
 
-  /// State for modal
+  // State for modals
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [modalMessage, setModalMessage] = useState("");
@@ -24,6 +24,7 @@ const Cart = () => {
   const [action, setAction] = useState(null);
   const [itemIndexToDelete, setItemIndexToDelete] = useState(null);
 
+  // Handle Checkout Confirmation
   const handleCheckout = () => {
     setModalTitle("Confirm Checkout");
     setModalMessage("Are you sure you want to proceed to checkout?");
@@ -38,9 +39,10 @@ const Cart = () => {
     setIsModalOpen(true);
   };
 
+  // Handle Delete Confirmation
   const handleDeleteConfirmation = (index, item) => {
     setModalTitle("Delete Item");
-    setModalMessage("Are you sure you want to remove?");
+    setModalMessage("Are you sure you want to remove this item from your cart?");
     setProductName(item.name);
     setItemIndexToDelete(index);
 
@@ -165,13 +167,15 @@ const Cart = () => {
           </div>
         )}
 
+        {/* Modal for Checkout and Delete Confirmation */}
         <Modal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           title={modalTitle}
           message={modalMessage}
           productName={productName}
-          action={action} // Pass the action state
+          type="confirmation" // Set type to "confirmation"
+          onConfirm={action} // Pass the action function
         />
       </div>
     </section>
