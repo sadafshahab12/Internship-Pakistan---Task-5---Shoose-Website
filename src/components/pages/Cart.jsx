@@ -2,6 +2,8 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useCart } from "../context/CartContext";
 import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Modal from "../ui/Modal";
 
 const Cart = () => {
   const { cartItems, updateCartItemQuantity, removeItemFromCart } = useCart();
@@ -14,9 +16,43 @@ const Cart = () => {
   const shippingCharges = totalPrice > 80 ? 0 : 10;
   const totalPriceWithShipping = totalPrice + shippingCharges;
 
+  /// State for modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
+  const [modalMessage, setModalMessage] = useState("");
+  const [productName, setProductName] = useState("");
+  const [action, setAction] = useState(null);
+  const [itemIndexToDelete, setItemIndexToDelete] = useState(null);
+
   const handleCheckout = () => {
-    navigate("/checkout", { state: { cartItems, totalPriceWithShipping } });
+    setModalTitle("Confirm Checkout");
+    setModalMessage("Are you sure you want to proceed to checkout?");
+    setProductName("");
+    setItemIndexToDelete(null);
+
+    // Set the action to navigate to the checkout page
+    setAction(() => () => {
+      navigate("/checkout", { state: { cartItems, totalPriceWithShipping } });
+      setIsModalOpen(false);
+    });
+    setIsModalOpen(true);
   };
+
+  const handleDeleteConfirmation = (index, item) => {
+    setModalTitle("Delete Item");
+    setModalMessage("Are you sure you want to remove?");
+    setProductName(item.name);
+    setItemIndexToDelete(index);
+
+    // Set the action to delete the item
+    setAction(() => () => {
+      removeItemFromCart(index);
+      setIsModalOpen(false);
+      setItemIndexToDelete(null);
+    });
+    setIsModalOpen(true);
+  };
+
   return (
     <section>
       <div className="max-w-6xl mx-auto xs:p-10 p-5 space-y-10 ">
@@ -51,7 +87,7 @@ const Cart = () => {
                       />
                       <button
                         className="w-8 h-8  bg-slate-200 text-lg active:scale-90 mytransition flex justify-center items-center rounded-full cursor-pointer absolute top-0 right-0 hover:bg-slate hover:text-white mytransition"
-                        onClick={() => removeItemFromCart(index)}
+                        onClick={() => handleDeleteConfirmation(index, item)}
                       >
                         <IoCloseOutline className="w-4 h-4" />
                       </button>
@@ -128,6 +164,15 @@ const Cart = () => {
             </div>
           </div>
         )}
+
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          title={modalTitle}
+          message={modalMessage}
+          productName={productName}
+          action={action} // Pass the action state
+        />
       </div>
     </section>
   );

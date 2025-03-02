@@ -5,8 +5,8 @@
   --breakpoint-xxs: 22rem;
   --breakpoint-xs: 30rem;
   --breakpoint-sm: 40rem;
-  --breakpoint-smd: 50rem;
-  --breakpoint-mmd: 60rem;
+  --breakpoint-smd: 50rem; /*800px*/
+  --breakpoint-mmd: 60rem; /*960px*/
   --breakpoint-lmd: 70rem;
   --breakpoint-lg: 80rem;
   --breakpoint-xl: 90rem;
@@ -14,6 +14,7 @@
   --breakpoint-xxxl: 120rem;
   --color-slate: #1d293d;
   --text-12: 12px;
+  --text-16: 16px;
   --text-20: 20px;
   --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
   --animate-zoom: zoom 5s ease-in-out infinite;
@@ -49,3 +50,4 @@
 }
 
 
+/* Add this to your global CSS file */

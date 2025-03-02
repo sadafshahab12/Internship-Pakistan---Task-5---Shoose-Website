@@ -72,7 +72,7 @@ const CategoryCard = ({ selectedCategory, sortOrder }) => {
 
   return (
     <div>
-      <div className="grid grid-cols-3 gap-6 pb-10 ">
+      <div className="grid grid-cols-2 mmd:grid-cols-3 gap-6 pb-10 ">
         {paginatedCategory.map((item, index) => (
           <div
             key={index}

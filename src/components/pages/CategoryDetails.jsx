@@ -14,6 +14,7 @@ const CategoryDetails = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [count, setCount] = useState(1);
   const { addToCart } = useCart();
+  const [isModalOpen , setIsModalOpen] = useState(false);
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
@@ -77,6 +78,7 @@ const CategoryDetails = () => {
       date: new Date().toLocaleDateString(),
     };
     addToCart(item);
+    setIsModalOpen(true);
     setCount(1);
     setSelectedSize(null);
   };

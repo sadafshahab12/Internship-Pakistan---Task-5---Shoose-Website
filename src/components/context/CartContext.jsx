@@ -21,24 +21,35 @@ export const CartProvider = ({ children }) => {
       }
     });
   };
-  const updateCartItemQuantity = (index, newQuantity)=>{
-    setCartItems((prevCartItem)=>{
-      const updateCartItems = [...prevCartItem]
-      updateCartItems[index].quantity = Math.max(1, newQuantity)
-      return updateCartItems
+  const updateCartItemQuantity = (index, newQuantity) => {
+    setCartItems((prevCartItem) => {
+      const updateCartItems = [...prevCartItem];
+      updateCartItems[index].quantity = Math.max(1, newQuantity);
+      return updateCartItems;
+    });
+  };
 
-    })
-  }
+  const removeItemFromCart = (index) => {
+    setCartItems((prevCartItem) => {
+      const updateCartItems = [...prevCartItem];
+      updateCartItems.splice(index, 1);
+      return updateCartItems;
+    });
+  };
 
-  const removeItemFromCart = (index)=>{
-setCartItems((prevCartItem)=>{
-  const updateCartItems = [...prevCartItem]
-  updateCartItems.splice(index,1)
-  return updateCartItems
-})
+  const clearCart = ()=>{
+    setCartItems([])
   }
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, updateCartItemQuantity, removeItemFromCart }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        updateCartItemQuantity,
+        removeItemFromCart,
+        clearCart
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

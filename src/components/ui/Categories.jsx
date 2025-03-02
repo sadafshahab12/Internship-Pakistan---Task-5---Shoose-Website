@@ -8,12 +8,12 @@ const Categories = () => {
   const categoryArray = ["All", "sneakers", "formal", "sports", "casual"];
   return (
     <>
-      <section className="max-w-6xl mx-auto p-10 space-y-10 ">
+      <section className="max-w-6xl mx-auto p-10 md:space-y-10 space-y-5 ">
         <div className="space-y-6">
           <h1 className="text-5xl hover:underline underline-offset-4 decoration-1 cursor-pointer  font-black">
             Categories
           </h1>
-          <nav className=" w-full flex justify-between">
+          <nav className=" w-full flex md:flex-row flex-col justify-between md:items-center items-start md:gap-0 gap-5">
             {/* filter by category  */}
             <ul className=" flex gap-20 bg-slate-200 py-3 px-4">
               {categoryArray.map((cata) => (
@@ -29,7 +29,7 @@ const Categories = () => {
               ))}
             </ul>
             {/* filter by price  */}
-            <div className="flex gap-4 items-center">
+            <div className="flex mmd:flex-row flex-col gap-0 mmd:gap-4 items-center">
               <label htmlFor="">Sort by Price:</label>
               <select
                 onChange={(e) => setSortOrder(e.target.value)}

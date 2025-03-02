@@ -5,6 +5,7 @@ import Shoes from "./components/pages/Shoes";
 import Cart from "./components/pages/Cart";
 import CategoryDetails from "./components/pages/CategoryDetails";
 import { CartProvider } from "./components/context/CartContext";
+import Checkout from "./components/pages/Checkout";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
               path="/category/:category/:id"
               element={<CategoryDetails />}
             />
+            <Route path="/checkout" element={<Checkout/>}/>
           </Routes>
         </BrowserRouter>
       </CartProvider>
