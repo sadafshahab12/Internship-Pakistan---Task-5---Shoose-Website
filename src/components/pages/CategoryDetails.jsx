@@ -107,18 +107,18 @@ const CategoryDetails = () => {
     setCount((prevCount) => Math.max(prevCount - 1, 1));
   };
   return (
-    <section>
+    <section className=" pt-15">
       <ProductDetailsHeader
         name={productDetails.name}
         category={productDetails.category}
       />
-      <div className="max-w-6xl mx-auto grid grid-cols-2 gap-10 px-10 py-15">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 smd:grid-cols-2 gap-10 px-5 sm:px-10 py-15">
         <div className="space-y-3">
           <div className="relative">
             <img
               src={productDetails.image[currentImageIndex]}
               alt={productDetails.name}
-              className="w-full h-100 object-cover "
+              className="w-full h-full md:h-100 object-cover "
             />
             <div className="flex items-center gap-3 absolute top-5 right-5 z-10">
               <div className="imageChevron" onClick={handleNextImage}>
@@ -129,13 +129,13 @@ const CategoryDetails = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center gap-5">
+          <div className="flex smd:flex-nowrap flex-wrap justify-center items-center gap-5">
             {productDetails.image.map((image, index) => (
               <div key={index}>
                 <img
                   src={image}
                   alt={image}
-                  className={`w-20 h-20 object-cover rounded-md cursor-pointer`}
+                  className={`w-15 md:w-20 h-15 md:h-20 object-cover rounded-md cursor-pointer`}
                   onClick={() => setCurrentImageIndex(index)}
                 />
               </div>
@@ -143,13 +143,17 @@ const CategoryDetails = () => {
           </div>
         </div>
 
-        <div className="space-y-6">
-          <h1 className="text-6xl font-black">{productDetails.name}</h1>
+        <div className="space-y-4 sm:space-y-6">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-black">
+            {productDetails.name}
+          </h1>
           <p className="text-lg">Price: ${productDetails.price}</p>
           <p className=" bg-slate text-white py-1.5 px-3 rounded-full inline text-sm border hover:border-orange-500 hover:text-orange-500 mytransition cursor-pointer">
             {productDetails.category}
           </p>
-          <p className="py-5 text-lg">{productDetails.description}</p>
+          <p className="py-5 text-14 sm:text-lg">
+            {productDetails.description}
+          </p>
           {/* counter  */}
           <div className=" flex items-center gap-5">
             <button
@@ -168,21 +172,23 @@ const CategoryDetails = () => {
           </div>
 
           {/* size  */}
-          <div className="size flex gap-3 items-center ">
+          <div className="size flex sm:flex-row flex-col gap-3 items-start sm:items-center ">
             <h1>Select Size:</h1>
-            {productDetails.sizes?.map((size) => (
-              <button
-                key={size}
-                className={`flex justify-center items-center h-10 w-10 border rounded-md text-16 cursor-pointer active:scale-95 ${
-                  selectedSize === size
-                    ? "bg-gradient-to-br from-teal-300   to-orange-300 border-none"
-                    : " text-gray-800 hover:bg-orange-200"
-                } mytransition`}
-                onClick={() => setSelectedSize(size)}
-              >
-                {size}
-              </button>
-            ))}
+            <div className="flex items-center gap-3">
+              {productDetails.sizes?.map((size) => (
+                <button
+                  key={size}
+                  className={`flex justify-center items-center h-6 xs:h-8 sm:h-10  w-6 xs:w-8 sm:w-10 border rounded-md text-14 sm:text-16 cursor-pointer active:scale-95 ${
+                    selectedSize === size
+                      ? "bg-gradient-to-br from-teal-300   to-orange-300 border-none"
+                      : " text-gray-800 hover:bg-orange-200"
+                  } mytransition`}
+                  onClick={() => setSelectedSize(size)}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
           </div>
           <div onClick={handleAddToCart}>
             <Button btnContent={"Add to Cart"} />

@@ -56,7 +56,7 @@ const Cart = () => {
   };
 
   return (
-    <section>
+    <section className="pt-15  pb-5">
       <div className="max-w-6xl mx-auto xs:p-10 p-5 space-y-10 ">
         <h1 className="text-3xl font-black">Your Cart</h1>
 

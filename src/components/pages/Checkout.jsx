@@ -2,12 +2,14 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import Button from "../ui/Button";
+import Modal from "../ui/Modal";
 
 const Checkout = () => {
   const { state } = useLocation(); // Access cart items and total price passed from Cart
   const { cartItems, clearCart } = useCart(); // Use clearCart to remove items after placing order
   const navigate = useNavigate();
-
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+  const [modalMessage, setModalMessage] = useState(""); // Message to display in modal
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,14 +43,21 @@ const Checkout = () => {
       totalPrice: cartItems.length > 0 ? state.totalPriceWithShipping : 0,
     };
     console.log(`Order Details:  ${orderDetails}`);
-    clearCart();
-    navigate("order-confirmation", { state: { orderDetails } });
+    // Show success modal
+    setModalMessage("Your order has been placed successfully!");
+    setIsModalOpen(true);
+
+    // Clear cart and navigate to order confirmation page after 2 seconds
+    setTimeout(() => {
+      clearCart();
+      navigate("/order-confirm", { state: { orderDetails } });
+    }, 2000);
   };
   const subTotal = cartItems.length > 0 ? state.totalPriceWithShipping : 0;
   const shipping = 0;
   const total = subTotal + shipping;
   return (
-    <section>
+    <section className="pt-15">
       <div>
         <div className="bg-gradient-to-b from-orange-200 to-teal-200 flex xs:flex-row flex-col-reverse justify-center items-center sm:p-10 xs:p-8 p-6 gap-5 relative">
           <div>
@@ -192,6 +201,14 @@ const Checkout = () => {
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Order Placed Successfully!"
+        message={modalMessage}
+        status="success"
+        type="notification" // No confirmation buttons, just a notification
+      />
     </section>
   );
 };

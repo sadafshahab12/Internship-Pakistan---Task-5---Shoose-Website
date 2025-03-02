@@ -2,18 +2,18 @@ import { useState } from "react";
 import CategoryCard from "../Home-ui/CategoryCard";
 import { MdOutlineDiscount } from "react-icons/md";
 
-const Categories = () => {
+const Categories = ({ heading }) => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortOrder, setSortOrder] = useState("");
   const categoryArray = ["All", "sneakers", "formal", "sports", "casual"];
   return (
     <>
-      <section className="md:max-w-6xl mx-auto p-5 sm:p-10 md:space-y-10 space-y-5 ">
+      <section className="md:max-w-6xl mx-auto p-5 sm:p-10 md:space-y-10 space-y-5 z-50 ">
         <div className="space-y-6">
           <h1 className="text-4xl sm:text-5xl hover:underline underline-offset-4 decoration-1 cursor-pointer  font-black">
-            Categories
+            {heading}
           </h1>
-          <nav className=" w-full flex md:flex-row flex-col justify-between md:items-center items-start md:gap-0 gap-5">
+          <nav className=" w-full flex md:flex-row flex-col justify-between md:items-center items-start md:gap-0 gap-5 z-50">
             {/* filter by category  */}
             <ul className=" flex gap-3 xxs:gap-5 xs:gap-10 sm:gap-15 md:gap-20 bg-slate-200 py-3 px-4 md:w-auto w-full">
               {categoryArray.map((cata) => (
@@ -29,7 +29,7 @@ const Categories = () => {
               ))}
             </ul>
             {/* filter by price  */}
-            <div className="flex mmd:flex-row flex-col gap-0 mmd:gap-4 items-center md-w-auto w-full">
+            <div className="flex mmd:flex-row flex-col gap-0 mmd:gap-4 items-center md:w-auto w-full">
               <label htmlFor="">Sort by Price:</label>
               <select
                 onChange={(e) => setSortOrder(e.target.value)}
@@ -50,7 +50,7 @@ const Categories = () => {
           </nav>
         </div>
 
-        <div className="  text-white font-light flex justify-center items-center text-sm tracking-widest xs:block hidden">
+        <div className="  text-white font-light xs:block text-center text-sm tracking-widest  hidden">
           <div className="bg-slate p-3">
             {" "}
             {selectedCategory === "All" ? (

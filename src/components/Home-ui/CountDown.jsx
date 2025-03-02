@@ -25,7 +25,7 @@ const CountDown = () => {
   const seconds = Math.floor((timeLeft / 1000) % 60);
   // console.log("seconds:", seconds)
   return (
-    <div className="flex flex-col justify-center items-center rotate-335 shadow-lg p-4 rounded-md ">
+    <div className="flex flex-col justify-center items-center rotate-335 shadow-lg p-2 xs:p-4 rounded-md ">
       <RxLapTimer className="w-6 xs:w-8 h-6 xs:h-8" />
       <h1 className="block text-12 xxs:text-sm">Limited Time Offer: </h1>
       <div className=" flex items-center gap-3">
